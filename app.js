@@ -6,7 +6,7 @@ const TG_USER = 'alex_xmos';
 
 const ITEMS = [
   {
-    id: 'drone', cat: ['Дроны', 'Drones'], price: 14000000,
+    id: 'drone', cat: ['Дроны', 'Drones'], price: 15000000,
     name: ['DJI Mini 5 Pro, полный комплект', 'DJI Mini 5 Pro, full kit'],
     cond: ['Отличное, летал пару раз', 'Excellent, flown a couple of times'],
     note: ['Пульт с экраном, три батареи, набор ND-фильтров, запасные пропеллеры и сумка.', 'Controller with screen, three batteries, ND filter set, spare propellers and bag.'],
