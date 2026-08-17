@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bali Sale — продаю вещи в Чангу</title>
+<meta name="description" content="Продаю личные вещи в Чангу, Бали: DJI Mini 5 Pro, ноутбук, гитарное и звуковое оборудование, массажный стол. Самовывоз, связь в Telegram.">
+<meta property="og:title" content="Bali Sale — продаю вещи в Чангу">
+<meta property="og:description" content="DJI Mini 5 Pro, ноутбук, гитарное и звуковое оборудование. Чангу, самовывоз.">
+<meta property="og:image" content="images/drone-1.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23C2553A'/%3E%3Ctext x='50' y='63' font-family='Georgia,serif' font-size='34' fill='%23F4EFE6' text-anchor='middle'%3EBS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page">
+  <div class="container">
+
+    <header class="site-header">
+      <span class="eyebrow" data-t="location">Canggu, Bali</span>
+      <div class="lang-switch">
+        <button type="button" class="lang-btn" data-lang="ru">RU</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1 class="hero-title" data-t="title"></h1>
+      <p class="hero-lede" data-t="lede"></p>
+      <div class="hero-facts">
+        <div class="fact">
+          <span class="fact-label" data-t="pickupLabel"></span>
+          <span class="fact-value" data-t="pickupValue"></span>
+        </div>
+        <div class="fact">
+          <span class="fact-label" data-t="priceLabel"></span>
+          <span class="fact-value" data-t="negotiable"></span>
+        </div>
+        <div class="fact">
+          <span class="fact-label" data-t="contactLabel"></span>
+          <a class="fact-value" href="https://t.me/alex_xmos" target="_blank" rel="noopener">@alex_xmos</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="items-header">
+      <h2 class="section-title" data-t="itemsHeading"></h2>
+      <span class="items-count" id="available-text"></span>
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+    <section class="map-section">
+      <div class="map-info">
+        <h2 class="section-title section-title--big" data-t="mapHeading"></h2>
+        <p class="map-body" data-t="mapBody"></p>
+        <a class="btn-primary" href="https://t.me/alex_xmos" target="_blank" rel="noopener" data-t="mapCta"></a>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=115.115%2C-8.672%2C115.165%2C-8.628&amp;layer=mapnik&amp;marker=-8.6478%2C115.1385" loading="lazy" title="Canggu"></iframe>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span data-t="footerNote"></span>
+      <a href="https://t.me/alex_xmos" target="_blank" rel="noopener">Telegram @alex_xmos</a>
+    </footer>
+
+  </div>
+</div>
+
+<div class="modal-backdrop" id="modal" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>
