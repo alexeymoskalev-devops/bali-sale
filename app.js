@@ -217,7 +217,7 @@ const mediaHtml = (item, lazy) => {
     <button type="button" class="media-nav media-nav--next" data-action="next" data-id="${item.id}" aria-label="→">›</button>
     <div class="media-dots">${dots}</div>` : '';
   return `
-    <div class="media">
+    <div class="media" data-id="${item.id}">
       <img src="${photoSrc(item.photos[cur(item)])}" alt="${item.name[li()]}"${lazy ? ' loading="lazy"' : ''}>
       ${nav}
     </div>`;
@@ -304,7 +304,35 @@ function go(id, n) {
   setState({ idx: { ...state.idx, [id]: ((n % len) + len) % len } });
 }
 
+/* Свайп по фото: горизонтальный жест листает карусель и гасит последующий click */
+let swipeStart = null;
+let swiped = false;
+
+document.addEventListener('pointerdown', (e) => {
+  const media = e.target.closest('.media');
+  swipeStart = media ? { x: e.clientX, y: e.clientY, id: media.dataset.id } : null;
+});
+
+document.addEventListener('pointerup', (e) => {
+  if (!swipeStart) return;
+  const dx = e.clientX - swipeStart.x;
+  const dy = e.clientY - swipeStart.y;
+  const item = ITEMS.find((x) => x.id === swipeStart.id);
+  if (item && item.photos.length > 1 && Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+    swiped = true;
+    setTimeout(() => { swiped = false; }, 100);
+    go(swipeStart.id, cur(item) + (dx < 0 ? 1 : -1));
+  }
+  swipeStart = null;
+});
+
 document.addEventListener('click', (e) => {
+  if (swiped) {
+    swiped = false;
+    e.stopPropagation();
+    e.preventDefault();
+    return;
+  }
   const langBtn = e.target.closest('.lang-btn');
   if (langBtn) return setState({ lang: langBtn.dataset.lang });
 
