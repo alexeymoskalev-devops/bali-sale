@@ -55,6 +55,13 @@ const ITEMS = [
     photos: ['petbag-1', 'petbag-2'],
   },
   {
+    id: 'cage', cat: ['Для питомцев', 'Pet'], price: 400000,
+    name: ['Клетка для животного', 'Pet crate'],
+    cond: ['Отличное', 'Excellent'],
+    note: ['Складная стальная клетка с выдвижным поддоном, дверца спереди и люк сверху.', 'Foldable steel crate with a slide-out tray, front door and top hatch.'],
+    photos: ['cage-1', 'cage-2'],
+  },
+  {
     id: 'stand', sold: true, cat: ['Гитара', 'Guitar'], price: 50000, priceNote: ['за две', 'for both'],
     name: ['Две гитарные стойки', 'Two guitar stands'],
     cond: ['Хорошее', 'Good'],
@@ -133,6 +140,15 @@ const DETAILS = {
     'Havana Pet Couture backpack carrier: sturdy printed fabric, grey lining, leg openings and side zippers.',
     'Can be worn as a backpack or over the shoulder, adjustable straps and belt, safety clip inside.',
     'Used a few times, excellent condition.',
+  ]],
+  cage: [[
+    'Складная клетка для собаки или кошки из стальной проволоки с чёрным покрытием.',
+    'Дверца спереди и люк сверху, снизу выдвижной пластиковый поддон — легко чистить. Складывается плоско за минуту, удобно хранить и перевозить.',
+    'Состояние отличное, пользовались недолго.',
+  ], [
+    'Foldable wire crate for a dog or cat, black coated steel.',
+    'Front door and a top hatch, slide-out plastic tray at the bottom — easy to clean. Folds flat in a minute for storage or transport.',
+    'Excellent condition, barely used.',
   ]],
   stand: [[
     'Две гитарные стойки: A-образная универсальная и складная на треноге, обе с мягкими упорами под корпус и гриф.',
