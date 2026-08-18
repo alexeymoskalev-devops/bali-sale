@@ -13,14 +13,14 @@ const ITEMS = [
     photos: ['drone-1', 'drone-2', 'drone-3'],
   },
   {
-    id: 'laptop', cat: ['Ноутбуки', 'Laptops'], price: 3000000,
+    id: 'laptop', sold: true, cat: ['Ноутбуки', 'Laptops'], price: 3000000,
     name: ['Lenovo Yoga Slim 7', 'Lenovo Yoga Slim 7'],
     cond: ['Удовлетворительное', 'Fair'],
     note: ['Intel Core i7, Evo, русская раскладка. Рабочий, но лучше брать как донор на запчасти.', 'Intel Core i7, Evo, Russian layout. Works, but better taken as a donor for parts.'],
     photos: ['laptop-1', 'laptop-2', 'laptop-3'],
   },
   {
-    id: 'table', cat: ['Массаж', 'Wellness'], price: 600000,
+    id: 'table', sold: true, cat: ['Массаж', 'Wellness'], price: 600000,
     name: ['Складной массажный стол', 'Foldable massage table'],
     cond: ['Отличное, использовался несколько раз', 'Excellent, used a few times'],
     note: ['Складывается в кейс, регулируемый подголовник и подлокотники.', 'Folds into a case, adjustable headrest and armrests.'],
@@ -34,7 +34,7 @@ const ITEMS = [
     photos: ['ux1-1', 'ux1-2'],
   },
   {
-    id: 'stomplab', cat: ['Гитара', 'Guitar'], price: 450000,
+    id: 'stomplab', sold: true, cat: ['Гитара', 'Guitar'], price: 450000,
     name: ['Педаль эффектов VOX StompLab', 'VOX StompLab multi-effects'],
     cond: ['Хорошее', 'Good'],
     note: ['Мультиэффект с тюнером, в комплекте блок питания.', 'Multi-effects with tuner, power supply included.'],
@@ -55,14 +55,14 @@ const ITEMS = [
     photos: ['petbag-1', 'petbag-2'],
   },
   {
-    id: 'stand', cat: ['Гитара', 'Guitar'], price: 50000, priceNote: ['за две', 'for both'],
+    id: 'stand', sold: true, cat: ['Гитара', 'Guitar'], price: 50000, priceNote: ['за две', 'for both'],
     name: ['Две гитарные стойки', 'Two guitar stands'],
     cond: ['Хорошее', 'Good'],
     note: ['A-образная и складная, обе с мягкими упорами.', 'An A-frame and a folding one, both with padded rests.'],
     photos: ['stand-1'],
   },
   {
-    id: 'cable', cat: ['Гитара', 'Guitar'], price: 100000,
+    id: 'cable', sold: true, cat: ['Гитара', 'Guitar'], price: 100000,
     name: ['Инструментальный кабель', 'Instrument cable'],
     cond: ['Отличное', 'Excellent'],
     note: ['Тканевая оплётка, прямой и угловой джек.', 'Braided sleeve, straight and angled jack.'],
